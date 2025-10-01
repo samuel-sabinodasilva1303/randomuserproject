@@ -124,16 +124,6 @@ dotnet restore
 dotnet run
 ```
 
-Ou use o script de build e execução:
-
-```bash
-# Windows
-dotnet build && dotnet run
-
-# Linux/Mac
-dotnet build && dotnet run
-```
-
 ### Passo 6: Acessar a Aplicação
 
 Abra seu navegador em:
