@@ -1,10 +1,6 @@
-# Random User Manager 👥
-
-Sistema de gerenciamento de usuários com integração à API Random User Generator, desenvolvido em ASP.NET Core 8.0 com PostgreSQL.
-
 ## 📋 Sobre o Projeto
 
-Aplicação web full-stack que permite:
+Aplicação web que permite:
 - ✅ Gerar usuários aleatórios via API Random User Generator
 - ✅ Criar, listar, editar e excluir usuários (CRUD completo)
 - ✅ Busca e paginação de usuários
@@ -15,35 +11,34 @@ Aplicação web full-stack que permite:
 ## 🛠️ Tecnologias Utilizadas
 
 ### Backend
-- **C# / .NET 8.0**
-- **ASP.NET Core 8.0** - Framework web
+- **C# / .NET 9.0** (compatível também com .NET 8.0, basta ajustar no .csproj)
+- **ASP.NET Core 9.0** - Framework  web
 - **Entity Framework Core 8.0** - ORM
 - **PostgreSQL** - Banco de dados
 - **AutoMapper** - Mapeamento de objetos
 - **Npgsql** - Provider PostgreSQL para .NET
 
 ### Frontend
-- **HTML5 / CSS3 / JavaScript (ES6+)**
+- **HTML5 / CSS3 / JavaScript**
 - **Bootstrap 5** - Framework CSS
 - **Font Awesome 6** - Ícones
-- **Fetch API** - Requisições HTTP
-
-### Arquitetura
-- **Repository Pattern** - Abstração da camada de dados
-- **DTOs (Data Transfer Objects)** - Contratos da API
-- **Dependency Injection** - Injeção de dependências
-- **Global Exception Handler** - Tratamento centralizado de erros
 
 ## 📦 Pré-requisitos
 
 Antes de começar, certifique-se de ter instalado:
 
-### 1. .NET 8.0 SDK
+### 1. .NET 9.0 SDK
+> 💡 Caso prefira usar .NET 8.0, altere o arquivo `.csproj`:
+> ```xml
+> <TargetFramework>net8.0</TargetFramework>
+> ```
+> Os pacotes são compatíveis.
+
 ```bash
 # Verificar instalação
 dotnet --version
 ```
-**Download:** https://dotnet.microsoft.com/download/dotnet/8.0
+**Download:** https://dotnet.microsoft.com/download/dotnet/9.0
 
 ### 2. PostgreSQL 12+
 ```bash
@@ -69,8 +64,8 @@ git --version
 ### Passo 1: Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/RandomUserProject.git
-cd RandomUserProject
+git clone git@github.com:samuel-sabinodasilva1303/randomuserproject.git
+cd randomuserproject
 ```
 
 ### Passo 2: Configurar o Banco de Dados PostgreSQL
@@ -154,7 +149,7 @@ Abra seu navegador em:
 2. Digite a quantidade desejada (1 a 100)
 3. Aguarde a geração
 
-Os usuários são gerados pela API Random User Generator em lotes de 20 para melhor performance.
+Os usuários são gerados pela API Random User Generator em lotes de 20, evitando travar as requisiçoes
 
 ### Buscar Usuários
 
@@ -164,7 +159,6 @@ Digite no campo de busca para filtrar por:
 - Cidade
 - País
 
-A busca possui **debounce de 500ms** para otimizar as requisições.
 
 ### Editar Usuário
 
@@ -369,11 +363,6 @@ Este projeto consome a **Random User Generator API**:
 - **Documentação:** https://randomuser.me/documentation
 - **Endpoint usado:** `https://randomuser.me/api/?results=20&nat=us,br,gb`
 
-### Nacionalidades Suportadas
-- 🇺🇸 US (United States)
-- 🇧🇷 BR (Brazil)
-- 🇬🇧 GB (United Kingdom)
-
 ## 📊 Estrutura do Banco de Dados
 
 ### Tabela `Users`
@@ -396,22 +385,6 @@ Este projeto consome a **Random User Generator API**:
 
 **Nota:** As tabelas são criadas automaticamente pelo Entity Framework Core na primeira execução através do método `EnsureCreated()` no `Program.cs`.
 
-## 🤝 Contribuindo
-
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto foi desenvolvido como parte de um desafio técnico e está disponível sob a licença MIT.
-
 ## 👤 Autor
 
 **Samuel Silva**
-
----
-
-**⭐ Se este projeto foi útil, considere dar uma estrela no repositório!**
