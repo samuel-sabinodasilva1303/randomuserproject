@@ -129,8 +129,6 @@ dotnet run
 Abra seu navegador em:
 - **URL:** http://localhost:5000
 
-**🎉 Pronto! A aplicação criará automaticamente as tabelas no banco de dados no primeiro acesso.**
-
 ## 📖 Como Usar
 
 ### Adicionar Usuários
